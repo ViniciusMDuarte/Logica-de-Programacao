@@ -1,0 +1,32 @@
+<meta charset="utf-8">
+<script> 
+
+function pulaLinha () {
+    document.write("<br>");
+}
+
+function mostra(frase){
+    document.write(frase);
+    pulaLinha();
+}
+
+function calculaPontos(vitorias,empates){
+    return vitorias * 3 + empates ;
+}
+var vitorias = parseInt(prompt("Informe Vitórias"));
+var empates = prompt("Informe empates");
+empates = parseInt(empates);
+var pontos = vitorias * 3 + empates;
+mostra(pontos)
+
+var pontosAdversario = 12
+if (pontos < pontosAdversario){
+    mostra ("Estou pior que outro");
+}
+if (pontos > pontosAdversario){
+    mostra ("Estou melhor que outro");
+}
+if (pontos == pontosAdversario){
+    mostra ("Estou empatado");
+}
+</script>

@@ -1,0 +1,42 @@
+<meta charset= "utf-8"> 
+<script>
+    function sorteia(n){
+            return Math.round(Math.random()*n)
+    }
+
+    function sorteiaLista(){
+        var numeros = [];
+        var quantidadeSorteada = 1;
+
+        while(quantidadeSorteada<= 3) {
+            var numeroSorteado = sorteia(10);
+            var existe = false;
+            for(var indice = 0;indice < numeros.length;indice++) {  
+                if(numeroSorteado == numeros[indice]){
+                    existe = true;
+                    break;
+                }
+            }
+            if(existe == false){
+                numeros.push(numeroSorteado);
+                quantidadeSorteada++;  
+            } 
+        }
+        return numeros;
+    }
+    var segredos = sorteiaLista();
+    console.log(segredos);
+    var chute = parseInt(prompt("Seu chute"));
+    var achou = false;
+    for(var i=0;i<segredos.length;i++){
+        if(chute == segredos [i]){
+            achou=true;
+            break;
+        }
+    }
+    if(achou == true){
+        alert("acertou");
+    }else{
+        alert("errou")
+    }
+</script>

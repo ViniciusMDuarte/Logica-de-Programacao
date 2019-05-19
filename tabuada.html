@@ -1,0 +1,19 @@
+<meta charset="utf-8">
+<script> 
+
+function pulaLinha () {
+    document.write("<br>");
+}
+
+function mostra(frase){
+    document.write(frase);
+    pulaLinha();
+}
+var numero = 0;
+var tabuada = parseInt(prompt("Diga Qual a sua Tabuada que voce deseja!"));
+    while (numero <= 10){
+    mostra(tabuada + "x" + numero + "=" + tabuada * numero);
+    numero = numero + 1;
+}
+mostra("FIM");
+</script>

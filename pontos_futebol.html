@@ -1,0 +1,36 @@
+<meta charset="utf-8">
+<script>   
+
+function pulaLinha () {
+    document.write("<br>");
+}
+
+function mostra(frase){
+    document.write(frase);
+    pulaLinha();
+}
+function calculaPontos(vitorias, empates) {
+    return(vitorias * 3) + empates;
+}
+var vitorias = parseInt(
+                prompt("Quantos jogos o joão vitor venceu ?"));
+var empates = parseInt(
+                prompt("Quantos jogos o CDC FC empatou?"));
+var pontos = (vitorias * 3) + empates;
+
+vitorias = parseInt(
+                prompt("Quantos vitorias do outro time ?"));
+empates = parseInt(
+                prompt("Quantos empates do outro time? "));
+var pontosAdversario = vitorias * 3 + empates;
+
+if (pontos > pontosAdversario) {
+    mostra("Nosso time está indo MELHOR que livros velhos");
+}
+if (pontos < pontosAdversario) {
+    mostra("Nosso time está indo PIOR que livros velhos");
+}
+if (pontos == pontosAdversario) {
+    mostra("Nosso time está EMPATADO com o time livros velhos");
+}
+</script>

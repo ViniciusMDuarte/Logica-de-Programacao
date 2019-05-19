@@ -1,0 +1,47 @@
+
+    <meta charset= "utf-8">  
+    <style>
+        #botao{
+            border-radius: 50%;
+            padding:10px; ; 
+            box-shadow:2px 2px orange;
+            transition:2s;
+        }
+        #botao:hover{
+            transform: rotate(720deg);
+        }
+    </style>
+    <label>Seu chute</label>
+        <input id="caixa">
+            <button id="botao">
+            Chutar
+            </button>
+        
+        <script>
+            function sorteia(n){
+                return Math.round(Math.random()*n)
+        }
+        function limparCampo(){
+            caixa.value="";
+            caixa.focus();
+            numeroPensado =sorteia(100);
+        }
+        function verificaChute(){
+            if(numeroPensado == caixa.value){
+                alert("acertou");
+                limparCampo();
+            } else{
+                alert("Voce errou");
+                caixa.value="";
+                caixa.focus();
+                numeroPensado =sorteia(100);
+            }
+        }
+        var numeroPensado = sorteia(100);
+        console.log(numeroPensado);
+        var caixa = document.getElementById("caixa");
+        var botao = document.getElementById("botao");
+        console.log(caixa);
+        console.log(botao);
+        botao.onclick=verificaChute;
+        </script>
